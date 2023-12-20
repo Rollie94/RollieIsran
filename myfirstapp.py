@@ -6,14 +6,13 @@ st.header("My first Streamlit App")
 
 option = st.sidebar.selectbox(
     'Select a mini project',
-     ['line chart','map','T n C'])
+     ['line chart','map','T n C','Long Process'])
 
 if option=='line chart':
     chart_data = pd.DataFrame(
     np.random.randn(20, 3),
     columns=['a', 'b', 'c'])
  st.line_chart(chart_data)
-
 elif option=='map':
     map_data = pd.DataFrame(
     np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
